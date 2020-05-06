@@ -1,0 +1,84 @@
+        <section class="section--main" id="welcome">
+            <div class="container">
+                <h1 class="title title--main">Bienvenue sur mon portfolio</h1>
+                <p>Jeune développeur en cours de développement, J'ai décidé de vous partager mes réalisations à ce jour
+                    et le(s) langage(s) ou framework avec lesquels je les ai développé. Ce site sera souvent mis à jour
+                    car j'y mettrai au fur et à mesure toutes mes réalisations à venir. J'espère que vous apprécierez.
+                    Sur ce, bonne découverte! <i class="fas fa-laugh-beam" style="color: #e8c414d9;"></i></p>
+                <a href="#abilities" class="cta">Découvrez-moi !</a>
+            </div>
+        </section>
+        <section class="container section" id="abilities">
+            <h2 class="title title--me title--color">Mes compétences</h2>
+            <p style="width: 100%;">Durant ma formation et mon apprentissage personnel, j'en suis venu à programmer le plus souvent avec les langages ci-dessous: </p>
+            <?php foreach ($languages as $language) { ?>
+                <figure class="detail <?= $language['Name'] ?>">
+                    <img src="img/technos/<?= $language['Image'] ?>" alt="<?= $language['Name'] ?>">
+                    <figcaption>
+                        <p class="uppercase"><?= $language['Name'] ?></p>
+                        <?= $language['Description'] ?>
+                    </figcaption>
+                </figure>
+            <?php } ?>
+            <p style="width: 100%;">J'ai aussi pu étudier quelques bases dans les frameworks et bibliothèques suivantes :</p>
+            <?php foreach ($technos as $techno) { ?>
+                <figure class="detail <?= $techno['Name'] ?>">
+                    <img src="img/technos/<?= $techno['Image'] ?>" alt="<?= $techno['Name'] ?>">
+                    <figcaption>
+                        <p class="uppercase"><?= $techno['Name'] ?></p>
+                        <?= $techno['Description'] ?>
+                    </figcaption>
+                </figure>
+            <?php } ?>
+        </section>
+        <section class="container section--services section">
+            <h2 class="title title--me title--color">Mes services</h2>
+            <article class="detail services" id="discute">
+                <div id="bounce">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <p><span class="caption">On discute</span></p>
+                <p>Tout d'abord, discutons de votre projet. Expliquez moi dans les détails ce que vous voulez faire, et
+                    si vous y avez déjà réfléchi, à quoi devrait ressembler votre projet final. Quelles fonctions et
+                    effets voulez-vous utiliser? Voulez-vous un espace utilisateur? Avez-vous une deadline définie?
+                    Dîtes moi tout !</p>
+            </article>
+            <article class="detail services" id="tente">
+                <div id="bounce">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <p><span class="caption">On tente</span></p>
+                <p>Après avoir passé en revue votre idée de projet, je vous dirai selon moi quelle technologie est la
+                    plus adaptée pour développer votre site et, s'il y en a à mes yeux, quelles fonctions nous pourrions
+                    ajouter ou améliorer. Bien sûr, n'hésitez pas à me préciser si vous voulez favoriser un aspect du
+                    site comme la vitesse de chargement des pages ou autre ;). Plus l'idée sera précise, plus simple
+                    elle sera à visualiser et donc conforme à vos attentes.</p>
+            </article>
+            <article class="detail services" id="code">
+                <div id="bounce">
+                    <i class="fas fa-code"></i>
+                </div>
+                <p><span class="caption">On code</span></p>
+                <p>Ca y est, vous m'avez transmis votre idée et nous somme venus à un accord sur une deadline et sur
+                    quelle technologie utiliser. Il ne me reste plus qu'à traduire vos idées en lignes de code. Je vous
+                    ferai régulièrement un rapport de mon avancée pour avoir vos retours, cela servira aussi à ce que
+                    vous témoigniez de l'état de votre site et pour ne pas que je m'éloigne de de ce qui était convenu.
+                    Une fois le projet terminé, je pourrai toujours y apporter des modifications ou des améliorations si
+                    vous le souhaitez. Je ferai toujours en sorte de vous proposer la deadline la plus courte possible
+                    afin de rendre tout le monde heureux: vous car vous recevrez un site conforme à vos attentes dans un
+                    délai rapide et moi car j'ai eu l'opportunité de vous aider :).</p>
+            </article>
+        </section>
+        <section class="section--exemples">
+            <div class="container exemples">
+                <h2 class="title title--me title--color">Quelques exemples de réalisations</h2>
+                <?php for ($i = count($works) - 1; $i >= count($works) - 3; $i--) { ?>
+                    <article>
+                        <h3 class="title title--real title--color"><?= $works[$i]['Title'] ?> :</h3>
+                        <img src="img/realisation/<?= $works[$i]['Screen'] ?>" alt="<?= $works[$i]['Name'] ?>">
+                        <p><?= substr($works[$i]['Description'], 0, 60) ?>... <a href="works.php#<?= $works[$i]['Name'] ?>" class="for-more">En savoir plus <i class="fas fa-plus-circle"></i></a></p>
+                    </article>
+                <?php } ?>
+                <p>Pour visionner toutes mes réalisations, <a href="works.php"><em>Cliquez ici</em></a>.</p>
+            </div>
+        </section>

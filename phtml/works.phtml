@@ -1,0 +1,16 @@
+<section class="section--exemples">
+    <div class="container exemples">
+        <h2 class="title title--me title--color">Mes réalisations</h2>
+        <?php foreach ($works as $work) { ?>
+            <article class="article--exemple" id="<?= $work['Name'] ?>">
+                <h3 class="title title--real title--color"><?= $work['Title'] ?> :</h3>
+                <img src="img/realisation/<?= $work['Screen'] ?>" alt="<?= $work['Name'] ?>">
+                <p><?= $work['Description'] ?></p>
+                <?php if ($work['Link'] !== null) { ?>
+                    <a href="<?= $work['Link'] ?>" target="_blank" class="for-more">Lien du site <i class="fas fa-plus-circle"></i></a>
+                <?php } ?>
+            </article>
+        <?php } ?>
+        <p>Ma prochaine réalisation sera peut-être votre projet !</p>
+    </div>
+</section>

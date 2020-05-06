@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="heidi">
+    <header class="container header--main">
+        <nav class="nav--main">
+            <ul class="list--nav--header">
+                <li class="logo-name">
+                    <img src="img/logo.svg" class="logo-princ" alt="logo">
+                    <span class="name">Ousmane Diarra</span>
+                </li>
+                <li class="list" id="home"><a href="index.php"><i class="fas fa-home"></i>Accueil</a></li>
+                <li class="list" id="works"><a href="works.php"><i class="fas fa-folder-open"></i>Réalisations</a></li>
+                <div class="element-hide">
+                    <li class="list element under-list contacts" id="contact"><i class="fas fa-envelope"></i>Contact
+                        <ul class="second-list hide contact">
+                            <li class="second-element"><a href="https://www.linkedin.com/in/ousmane-diarra-065907189/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="second-element"><a href="https://github.com/ouss17" target="_blank"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <?php include $template . '.phtml'; ?>
+    </main>
+    <footer class="footer--main">
+        <a href="#heidi" class="scroll-top" id="up"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+
+</html>
